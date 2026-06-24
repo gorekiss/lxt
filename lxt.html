@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LXT Loader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: system-ui; background: linear-gradient(135deg, #0a0e17, #1a1f2e); }
+        .glass { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(16px); }
+        .logo-glow { text-shadow: 0 0 25px #a855f7; }
+    </style>
+</head>
+<body class="min-h-screen text-white flex items-center justify-center">
+    <div class="glass border border-purple-500/40 rounded-3xl p-12 w-full max-w-lg text-center">
+        <h1 class="text-6xl font-bold logo-glow mb-2">LXT</h1>
+        <p class="text-purple-400 mb-8">PREMIUM R6 DEMO LOADER</p>
+        
+        <input id="key" placeholder="Enter License Key" class="w-full bg-black/50 border border-slate-600 rounded-2xl px-6 py-4 text-lg mb-4">
+        <button onclick="checkKey()" class="w-full bg-purple-600 hover:bg-purple-500 py-4 rounded-2xl font-bold text-xl">AUTHENTICATE</button>
+        
+        <div id="status" class="mt-6 text-sm"></div>
+    </div>
+
+    <script>
+        function checkKey() {
+            const key = document.getElementById("key").value.trim().toUpperCase();
+            const status = document.getElementById("status");
+            
+            status.innerHTML = "Authenticating...";
+            
+            setTimeout(() => {
+                if (key === "LXT-DEMO-2026") {
+                    status.innerHTML = `<span style="color:#22c55e">✅ ACCESS GRANTED</span><br><br>Welcome to LXT Demo!<br>All features are fake for demonstration.`;
+                } else {
+                    status.innerHTML = `<span style="color:#ef4444">❌ Invalid Key</span>`;
+                }
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
