@@ -7,129 +7,153 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body { font-family: 'Inter', system-ui, sans-serif; }
-        .hero { background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 100%); }
+        .hero { background: linear-gradient(135deg, #0a0e17, #1a1f2e); }
         .glass { background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(20px); }
         .status-dot { animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-        .nav-active { background: linear-gradient(to right, #6b21a8, #a855f7); color: white; border-radius: 9999px; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full border-b border-zinc-800 bg-black/90 backdrop-blur-lg z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <nav class="border-b border-zinc-800 bg-black/80 backdrop-blur-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="text-4xl font-bold tracking-tighter text-purple-500 logo-glow">LXT</div>
-                <span class="px-3 py-1 text-xs bg-emerald-500/20 text-emerald-400 rounded-full font-medium">UNDETECTED</span>
+                <div class="text-3xl font-bold tracking-tighter text-purple-500">LXT</div>
+                <span class="text-xs bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full font-medium">UNDETECTED</span>
             </div>
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="#features" class="hover:text-purple-400">Features</a>
-                <a href="#status" class="hover:text-purple-400">Status</a>
-                <a href="#pricing" class="hover:text-purple-400">Pricing</a>
-                <a href="#loader" class="hover:text-purple-400">Loader</a>
-                <a href="#discord" class="hover:text-purple-400">Discord</a>
+            <div class="flex gap-8 text-sm">
+                <a href="#features" class="hover:text-purple-400 transition">Features</a>
+                <a href="#status" class="hover:text-purple-400 transition">Status</a>
+                <a href="#" class="hover:text-purple-400 transition">Pricing</a>
+                <a href="https://discord.gg/" target="_blank" class="hover:text-purple-400 transition">Discord</a>
             </div>
             <button onclick="document.getElementById('loader').scrollIntoView({behavior:'smooth'})" 
-                    class="bg-purple-600 hover:bg-purple-500 px-8 py-3 rounded-2xl font-semibold">LAUNCH LXT</button>
+                    class="bg-purple-600 hover:bg-purple-500 px-6 py-2.5 rounded-xl font-semibold">
+                LAUNCH LOADER
+            </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero pt-32 pb-20 text-center">
-        <div class="max-w-5xl mx-auto px-6">
-            <h1 class="text-7xl font-bold mb-6">DOMINATE RAINBOW SIX SIEGE</h1>
-            <p class="text-3xl text-zinc-400 mb-10">Undetected • Premium • Built for Season Y8</p>
+    <section class="hero pt-32 pb-24 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-6xl font-bold mb-6">LXT • Rainbow Six Siege</h1>
+            <p class="text-2xl text-zinc-400 mb-10">Premium Cheats • Undetected • Built for 2026</p>
             <button onclick="document.getElementById('loader').scrollIntoView({behavior:'smooth'})" 
-                    class="bg-gradient-to-r from-purple-600 to-pink-600 text-2xl font-bold px-16 py-6 rounded-3xl hover:scale-105 transition">
-                OPEN PREMIUM LOADER
+                    class="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-5 rounded-2xl text-xl font-bold hover:scale-105 transition">
+                OPEN DEMO LOADER
             </button>
         </div>
     </section>
 
-    <!-- Loader Section -->
-    <section id="loader" class="max-w-7xl mx-auto px-6 py-20">
-        <h2 class="text-4xl font-bold text-center mb-12">LXT Premium Loader</h2>
-        <!-- YOUR ORIGINAL FULL LOADER PASTED HERE -->
-        <div class="glass border border-purple-500/30 rounded-3xl overflow-hidden shadow-2xl">
-            <!-- [Full original loader code from your file is embedded below] -->
-            <!-- Login + Dashboard included -->
-            <div id="loginScreen" class="p-12">
-                <!-- Your original login code here (shortened for space but fully functional) -->
-                <div class="max-w-md mx-auto text-center">
-                    <div class="text-6xl font-bold text-purple-400 mb-8">LXT</div>
-                    <input id="keyInput" type="text" placeholder="Enter License Key" 
-                           class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-5 text-lg mb-6">
-                    <button onclick="authenticate()" class="w-full py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-xl font-bold">AUTHENTICATE</button>
-                    <div id="loginMsg" class="mt-6 text-lg"></div>
-                </div>
-            </div>
-            <div id="dashboard" class="hidden p-8">
-                <p class="text-center text-2xl text-emerald-400">✅ Welcome to LXT Demo</p>
-                <p class="text-center text-zinc-400 mt-4">All features are simulated for demonstration purposes only.</p>
-            </div>
+    <!-- LXT Loader (your original) -->
+    <div id="loader" class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Paste your full original loader HTML here (login + dashboard) -->
+        <!-- For now I'm including a placeholder - replace with your full code -->
+        <div class="text-center py-12 border border-dashed border-purple-500/30 rounded-3xl">
+            <p class="text-2xl mb-4">🔒 LXT Premium Loader</p>
+            <p class="text-zinc-400">Scroll down or click "LAUNCH LOADER" above</p>
+            <!-- Your full loader code goes here -->
         </div>
-    </section>
+    </div>
 
-    <!-- Status -->
+    <!-- Status Page -->
     <section id="status" class="py-20 bg-black">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-4">Live System Status</h2>
-            <p class="text-emerald-400 text-center mb-12">All services operational • June 24, 2026</p>
-            
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold mb-3">System Status</h2>
+                <p class="text-emerald-400 text-xl">All systems operational • Last updated moments ago</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Main Status -->
+                <div class="glass rounded-3xl p-10 border border-emerald-500/30">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="text-2xl font-semibold">LXT Loader</div>
+                        <span class="px-5 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-medium flex items-center gap-2">
+                            <span class="w-3 h-3 bg-emerald-400 rounded-full status-dot"></span>
+                            ONLINE
+                        </span>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center">
+                            <span>Game Version</span>
+                            <span class="text-emerald-400">Y8S3 • Supported</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Injection Method</span>
+                            <span class="text-emerald-400">Manual + Kernel</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Bypass Status</span>
+                            <span class="text-emerald-400">BattlEye • Undetected</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Last Detection</span>
+                            <span class="text-emerald-400">Never</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Server Status -->
+                <div class="glass rounded-3xl p-10">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-server"></i> Servers
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="flex justify-between">
+                            <span>EU-West</span>
+                            <span class="text-emerald-400">● Online (42ms)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>NA-East</span>
+                            <span class="text-emerald-400">● Online (28ms)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Asia</span>
+                            <span class="text-emerald-400">● Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-sm text-zinc-500">
+                ✅ All modules are currently <span class="text-emerald-400">UNDETECTED</span><br>
+                Updated: June 24, 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 bg-zinc-950">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl text-center">
-                    <div class="text-6xl font-mono font-bold text-emerald-400" id="uptime">99.99</div>
-                    <div class="text-zinc-400">Uptime</div>
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-2xl mb-4">🎯 Aimbot</h3>
+                    <p class="text-zinc-400">Silent • FOV • Memory Aim</p>
                 </div>
-                <div class="glass p-8 rounded-3xl text-center">
-                    <div class="text-6xl font-mono font-bold text-purple-400">184k</div>
-                    <div class="text-zinc-400">Active Users</div>
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-2xl mb-4">👁️ Visuals</h3>
+                    <p class="text-zinc-400">Box ESP • Skeleton • Health ESP</p>
                 </div>
-                <div class="glass p-8 rounded-3xl text-center">
-                    <div class="text-emerald-400 text-6xl">●</div>
-                    <div class="text-emerald-400 font-medium">BattlEye Undetected</div>
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-2xl mb-4">⚡ Misc</h3>
+                    <p class="text-zinc-400">No Recoil • Triggerbot • Spoofer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features, Pricing, Testimonials, FAQ, Discord Widget etc. are all included in the full version. -->
-
-    <footer class="py-12 text-center text-zinc-500 text-sm border-t border-zinc-800">
-        LXT • Demo Website for Entertainment Only • Not affiliated with Ubisoft
+    <footer class="py-12 border-t border-zinc-800 text-center text-zinc-500 text-sm">
+        LXT • Demo Version • For Entertainment Only • Not affiliated with Ubisoft or Rainbow Six Siege
     </footer>
 
     <script>
-        // Full script from your original loader + extras
-        const VALID_KEY = "LXT-DEMO-2026";
-        
-        function authenticate() {
-            const msg = document.getElementById("loginMsg");
-            msg.textContent = "Authenticating...";
-            msg.style.color = "#fde047";
-            
-            setTimeout(() => {
-                if (document.getElementById("keyInput").value.trim().toUpperCase() === VALID_KEY) {
-                    document.getElementById("loginScreen").classList.add("hidden");
-                    document.getElementById("dashboard").classList.remove("hidden");
-                    alert("✅ Full access granted (Demo Mode)");
-                } else {
-                    msg.textContent = "Invalid key. Try LXT-DEMO-2026";
-                    msg.style.color = "#f87171";
-                }
-            }, 1400);
-        }
-
-        // Fake live counters
-        setInterval(() => {
-            const uptime = document.getElementById("uptime");
-            if (uptime) uptime.textContent = (99.98 + Math.random() * 0.02).toFixed(2);
-        }, 4000);
-
-        console.log("%cLXT Premium Website - Fully Loaded", "color: #a855f7; font-size: 18px");
+        // Your original loader script goes here
+        console.log("%cLXT Website Loaded", "color: #a855f7; font-size: 14px");
     </script>
 </body>
 </html>
